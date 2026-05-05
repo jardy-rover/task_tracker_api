@@ -57,6 +57,7 @@ docker-compose.override.yml
 # Personal tracking files
 TODOLIST.txt
 DIDLIST.txt
+temporary_code.js
 
 # Archives
 *.zip

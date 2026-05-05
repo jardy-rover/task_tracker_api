@@ -4,47 +4,63 @@ API for task management, allowing users to create, organize, and track their act
 
 ## Project Status
 
-In early development
+In development  
+Core features implemented.
 
 ## Features
 
 ### Implemented
 
-- Initial project structure
-- Basic server setup
-- Task CRUD operations
+- Basic project structure
+- REST API structure following layered architecture
+- Task CRUD operations (Create, Read, Update, Delete)
+- Input validation layer for request safety
+- Separation between controllers, services, and validators
+- Centralized error handling
+- Automated testing with Jest and Supertest
 
 ### Planned
 
-- User system
-- JWT authentication
-- Data validation
-- Pagination and filtering
-- PostgreSQL integration
-- Automated tests
-- Docker ccontainerization
-- API documentation
+- User management system
+- Authentication and authorization (JWT)
+- Pagination and filtering for task queries
+- PostgreSQL database integration
+- Docker containerization
+- API documentation with Swagger
 
 ## Tech Stack
 
 - Node.js
-- JavaScript
-- PostgreSQL
+- JavaScript (ES6+)
+- Express
 - Jest
+- Supertest
+- PostgreSQL (planned)
 
 ## API Endpoints
 
 ```
-POST   /tasks
-GET    /tasks
-GET    /tasks/:id
-PUT    /tasks/:id
+
+POST /tasks
+GET /tasks
+GET /tasks/:id
+PUT /tasks/:id
 DELETE /tasks/:id
+
 ```
 
-## Tests
+## Testing
 
-Automated tests will be implemented using Jest.
+This project uses automated tests to ensure API reliability.
+
+- Jest (unit and integration testing)
+- Supertest (HTTP endpoint testing)
+
+### Run tests
+
+```bash
+npm test
+```
 
 ## Project Structure
 
@@ -52,18 +68,24 @@ Automated tests will be implemented using Jest.
 src/
   controllers/
   services/
-  models/
   routes/
-  data/
+  validators/
+tests/
+  tasks.test.js
+  tasksValidator.test.js
+server.js
+app.js
 ```
 
 ## Roadmap
 
-- [ ] Set up PostgreSQL database
-- [✔] Implement task CRUD
-- [ ] Create user system
-- [ ] Implement authentication
-- [ ] Add validations
-- [ ] Write automated tests
-- [ ] Configure deployment
+- [x] Implement task CRUD
+- [x] Add input validation layer
+- [x] Create automated tests
+- [ ] Integrate PostgreSQL
+- [ ] Implement user system
+- [ ] Add authentication (JWT)
+- [ ] Improve validation coverage
+- [ ] Add pagination and filtering
+- [ ] Configure deployment pipeline
 - [ ] Document API with Swagger
